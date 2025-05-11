@@ -1,4 +1,6 @@
 <template>
+    <slot>slot ketika komponen anak tidak menerima konten dari komponen induk</slot> 
+    <br>
     Ini adalah mobil {{ namamobil }} <button @click="tampildata">Pilih</button>
 </template>
 
