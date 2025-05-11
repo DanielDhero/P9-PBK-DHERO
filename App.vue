@@ -4,18 +4,28 @@
   export default { 
     components : {
       mobil
+    },
+    data() {
+      return {
+        mobilyangdipilih: ''
+        }
+      },
+      methods: {
+        tampildata(whatever){
+          this.mobilyangdipilih = whatever
+        }
+      }
     }
-
-  }
-
 </script>
 
 <template>
-  <mobil namamobil="Kijang"/> 
+  <mobil @tampil="tampildata" namamobil="Kijang"/> 
   <br>
-  <mobil namamobil="Avanza"/>
+  <mobil @tampil="tampildata" namamobil="Avanza"/>
   <br>
-  <mobil namamobil="Pajero"/>
+  <mobil @tampil="tampildata" namamobil="Pajero"/>
+
+  <p>Mobil yang anda pilih: {{ mobilyangdipilih }} </p>
 </template>
 
 <style>
